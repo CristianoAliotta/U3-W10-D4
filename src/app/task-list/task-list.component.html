@@ -1,0 +1,18 @@
+<div id="main">
+  <ul>
+    <li *ngFor="let task of todos; let i = index">
+      <div id="todo">
+        <span><i class="bi bi-caret-right-fill"></i></span>
+        <span>{{ i + 1 }}</span
+        ><span>{{ task.title }}</span>
+      </div>
+      <div>
+        <button id="btn-remove" (click)="onRemove(task)">
+          <i class="bi bi-trash"></i></button
+        ><button id="btn-check" (click)="onChecked(task)">
+          <i class="bi bi-check2"></i>
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>

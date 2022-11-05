@@ -1,0 +1,14 @@
+<div id="main">
+  <h1>Completed task</h1>
+  <ul>
+    <li *ngFor="let task of taskChecked; let i = index">
+      <div>
+        <span><i class="bi bi-caret-right-fill"></i></span
+        ><span>{{task.title}}</span>
+      </div>
+      <button (click)="onUndo(task)">
+        <i class="bi bi-arrow-return-left"></i>
+      </button>
+    </li>
+  </ul>
+</div>
