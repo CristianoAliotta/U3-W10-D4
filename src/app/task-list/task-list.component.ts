@@ -12,8 +12,12 @@ export class TaskListComponent implements OnInit {
   constructor(private todoService: TodosService) { }
 
   todos: TaskClass[] = this.todoService.todoArr
+  delay: boolean = false
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.delay = true
+    }, 2000)
   }
   onRemove(ele: TaskClass) {
     this.todoService.removeTask(ele)

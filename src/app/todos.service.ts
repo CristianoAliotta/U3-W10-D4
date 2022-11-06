@@ -5,13 +5,7 @@ import { TaskClass } from './classes/task-class.class';
   providedIn: 'root'
 })
 export class TodosService {
-  todoArr: TaskClass[] = [
-    {
-      id: 1,
-      title: 'prova prova prova',
-      completed: false
-    }
-  ]
+  todoArr: TaskClass[] = []
   checkedArr: TaskClass[] = []
   constructor() { }
   removeTask(ele: TaskClass) {

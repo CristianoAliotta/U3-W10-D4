@@ -1,6 +1,11 @@
 <div id="main">
   <h1>Completed task</h1>
-  <ul>
+  <h1 *ngIf="delay === false">Loading task...</h1>
+  <h2 *ngIf="taskChecked.length === 0 && delay === true">
+    No tasks completed yet! <br />
+    You still have a lot of work to do...
+  </h2>
+  <ul *ngIf="delay === true">
     <li *ngFor="let task of taskChecked; let i = index">
       <div>
         <span><i class="bi bi-caret-right-fill"></i></span

@@ -1,5 +1,11 @@
 <div id="main">
-  <ul>
+  <h1 *ngIf="delay === false">Loading task...</h1>
+
+  <ul *ngIf="delay === true">
+    <h2 *ngIf="todos.length === 0">
+      Oops, seems like you have no task left! <br />
+      Try to add a new one...
+    </h2>
     <li *ngFor="let task of todos; let i = index">
       <div id="todo">
         <span><i class="bi bi-caret-right-fill"></i></span>

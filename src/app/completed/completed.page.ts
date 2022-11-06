@@ -10,7 +10,11 @@ export class CompletedPage implements OnInit {
 
   constructor(private todoService: TodosService) { }
   taskChecked: TaskClass[] = this.todoService.checkedArr
+  delay: boolean = false
   ngOnInit(): void {
+    setTimeout(() => {
+      this.delay = true
+    }, 2000)
   }
   onUndo(ele: TaskClass) {
     this.todoService.undoTask(ele)
